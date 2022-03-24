@@ -1,0 +1,9 @@
+{
+    "dev":{
+        "driver":"pg",
+        "host": "localhost",
+        "database": "catastrogeosat",
+        "user": "ale12",
+        "password": "password"
+    }
+}
