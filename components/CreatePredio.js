@@ -1,5 +1,4 @@
 
-//import gql from 'graphql-tag';
 import { useMutation,gql } from '@apollo/react-hooks';
 
 const CREATE_PREDIO_MUTATION = gql`
@@ -32,7 +31,7 @@ const CreatePredio = () => {
             <div>
                 <h1>PREDIO</h1>
                 <div className='form' >
-                    <label for="title">Nombre Predio</label>
+                    <label for="nonmbrep">Nombre Predio</label>
                     <input
                         ref={value => nombrep = value}
                         id="nombrep"

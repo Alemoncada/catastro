@@ -4,7 +4,7 @@ import { useMutation,gql } from '@apollo/react-hooks';
 
 const CREATE_PROPIETARIO_MUTATION = gql`
     mutation createPropietario($nombre: String!, $direccion: String!, $telefono: String!, $email:String!, $tipo: String!, $ccNit:String!) {
-        createPredio( input: { nombre: $nombre, direccion: $direccion, telefono: $telefono, email: $email, tipo:$tipo,} ) {
+        createPredio( input: { nombre: $nombre, direccion: $direccion, telefono: $telefono, email: $email, tipo:$tipo,ccNit: $ccNit} ) {
         id
         nombre
         direccion
@@ -20,21 +20,21 @@ const CREATE_PROPIETARIO_MUTATION = gql`
 
 const CreatePropietario = () => {
     let nombre, direccion, telefono, email, tipo, ccNit;
-    const [CreatePropietario] = useMutation(CREATE_PROPIETARIO_MUTATION);
+    const [createPropietario] = useMutation(CREATE_PROPIETARIO_MUTATION);
   
     return (
       <div>
         <form
           onSubmit={e => {
             e.preventDefault();
-            CreatePropietario({ variables: { nombre: nombre.value, direccion: direccion.value, telefono: telefono.value, email: email.value, tipo: tipo.value, ccNit: ccNit.value } });
+            createPropietario({ variables: { nombre: nombre.value, direccion: direccion.value, telefono: telefono.value, email: email.value, tipo: tipo.value, ccNit: ccNit.value } });
           }}
           
         >
             <div>
                 <h1>PROPIETARIO</h1>
                 <div className='form' >
-                    <label for="title">Nombre Propietario</label>
+                    <label for="nombre">Nombre Propietario</label>
                     <input
                         ref={value => nombre = value}
                         id="nombre"
