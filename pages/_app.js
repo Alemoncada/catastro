@@ -1,13 +1,17 @@
 import { ApolloProvider } from "@apollo/client";
 import client from "../apollo-client";
+import CreatePredio from '../components/CreatePredio'
+import CreatePropietario from "../components/CreatePropietario";
+
 
 import '../styles/globals.css'
 
-function MyApp({ Component, pageProps }) {
+function App() {
   return(
   <ApolloProvider client={client}>
-    <Component {...pageProps} />
+    <CreatePropietario />
+    <CreatePredio />   
   </ApolloProvider>) 
 }
 
-export default MyApp
+export default App
