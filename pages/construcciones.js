@@ -9,7 +9,7 @@ import '../styles/globals.css'
 export default function Construcciones() {
   return(
   <ApolloProvider client={client}>
-     <ConstruccionesTable />    
+     <ConstruccionesTable/>    
   </ApolloProvider>) 
 }
  

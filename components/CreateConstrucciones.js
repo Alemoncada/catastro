@@ -75,7 +75,7 @@ const CreateConstruccione = () => {
                 </div>
                 
                 <div class="pure-controls">
-                    <button type="submit">Crear Construccion</button>
+                    <button variant="primary" type="submit">Crear Construccion</button>
                 </div>
             </div>
         </form>

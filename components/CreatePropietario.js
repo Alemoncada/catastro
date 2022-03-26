@@ -2,6 +2,7 @@ import { useMutation,gql } from '@apollo/react-hooks';
 
 
 
+
 const CREATE_PROPIETARIO_MUTATION = gql`
     mutation createPropietario($nombre: String!, $direccion: String!, $telefono: String!, $email:String!, $tipo: String!, $ccNit:String!) {
         createPredio( input: { nombre: $nombre, direccion: $direccion, telefono: $telefono, email: $email, tipo:$tipo,ccNit: $ccNit} ) {
@@ -24,6 +25,9 @@ const CreatePropietario = () => {
   
     return (
       <div>
+
+        <h1> CATASTRO</h1>
+
         <form
           onSubmit={e => {
             e.preventDefault();
@@ -83,7 +87,7 @@ const CreatePropietario = () => {
                     />
                 </div>
                 <div class="pure-controls">
-                    <button type="submit">Crear Propietario</button>
+                    <button variant="primary" type="submit">Crear Propietario</button>
                 </div>
             </div>
         </form>
