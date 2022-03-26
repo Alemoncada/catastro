@@ -1,16 +1,12 @@
 import { ApolloProvider } from "@apollo/client";
 import PropietariosTable from "../components/PropietariosTable";
 import client from "../apollo-client";
-
-
-
-
-import '../styles/globals.css'
-import UpdatePropietario from "../components/UpdatePropietario";
+import {UpdatePropietario, DeletePropietario} from "../components/UpdatePropietario";
 
 export default function Propietarios() {
   return(
   <ApolloProvider client={client}>
+    <DeletePropietario />
     <UpdatePropietario />
     <PropietariosTable />    
   </ApolloProvider>) 

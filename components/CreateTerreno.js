@@ -33,7 +33,7 @@ const CreateTerreno = () => {
             <div className='form'>
                 <h1>TERRENO</h1>
                 <div className='form' >
-                    <label for="nombret">Nombre Terreno: </label>
+                    <label >Nombre Terreno: </label>
                     <input
                         ref={value => nombret = value}
                         id="nombret"
@@ -41,7 +41,7 @@ const CreateTerreno = () => {
                     />
                 </div>
                 <div className='form'>
-                    <label for="area">Area: </label>
+                    <label >Area: </label>
                     <input
                         ref={value =>area = value}
                         id="area"
@@ -49,7 +49,7 @@ const CreateTerreno = () => {
                     />
                 </div>
                 <div className='form'>
-                    <label for="valor">Valor: </label>
+                    <label >Valor: </label>
                     <input
                         ref={value => valor = value}
                         id="valor"
@@ -57,7 +57,7 @@ const CreateTerreno = () => {
                     />
                 </div>  
                 <div className='form'> 
-                    <label for="direccion">Direccion: </label>
+                    <label >Direccion: </label>
                     <input
                         ref={value => direccion = value}
                         id="direccion"
@@ -66,7 +66,7 @@ const CreateTerreno = () => {
                 </div>
                
                 <div className='form'> 
-                    <label for="construccionid">Id Construccion a la que pertenece: </label>
+                    <label >Id Construccion a la que pertenece: </label>
                     <input
                         ref={value => construccionid  = value}
                         id="construccionid"
@@ -74,7 +74,7 @@ const CreateTerreno = () => {
                     />
                 </div>
                 
-                <div class="pure-controls">
+                <div>
                     <button type="submit">Crear Terreno</button>
                 </div>
             </div>

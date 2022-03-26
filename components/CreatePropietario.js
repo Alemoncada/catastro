@@ -26,8 +26,6 @@ const CreatePropietario = () => {
     return (
       <div>
 
-        <h1> CATASTRO</h1>
-
         <form
           onSubmit={e => {
             e.preventDefault();
@@ -38,7 +36,7 @@ const CreatePropietario = () => {
             <div className='form'>
                 <h1>PROPIETARIO</h1>
                 <div className='form' >
-                    <label for="nombre">Nombre Propietario: </label>
+                    <label >Nombre Propietario: </label>
                     <input
                         ref={value => nombre = value}
                         id="nombre"
@@ -46,7 +44,7 @@ const CreatePropietario = () => {
                     />
                 </div>
                 <div className='form'>
-                    <label for="direccion">Dirección: </label>
+                    <label >Dirección: </label>
                     <input
                         ref={value =>direccion = value}
                         id="direccion"
@@ -54,7 +52,7 @@ const CreatePropietario = () => {
                     />
                 </div>
                 <div className='form'>
-                    <label for="telefono">Telefono: </label>
+                    <label >Telefono: </label>
                     <input
                         ref={value => telefono = value}
                         id="telefono"
@@ -62,7 +60,7 @@ const CreatePropietario = () => {
                     />
                 </div>  
                 <div className='form'> 
-                    <label for="email">email: </label>
+                    <label >email: </label>
                     <input
                         ref={value => email = value}
                         id="email"
@@ -71,7 +69,7 @@ const CreatePropietario = () => {
                 </div>
                
                 <div className='form'> 
-                    <label for="tipo">Tipo natural o juridica: </label>
+                    <label >Tipo natural o juridica: </label>
                     <input
                         ref={value => tipo = value}
                         id="tipo"
@@ -79,15 +77,15 @@ const CreatePropietario = () => {
                     />
                 </div>
                 <div className='form'> 
-                    <label for="ccNit">Cedula o Nit:  </label>
+                    <label >Cedula o Nit:  </label>
                     <input
                         ref={value => ccNit = value}
                         id="ccNit"
                         
                     />
                 </div>
-                <div class="pure-controls">
-                    <button variant="primary" type="submit">Crear Propietario</button>
+                <div >
+                    <button type="submit">Crear Propietario</button>
                 </div>
             </div>
         </form>

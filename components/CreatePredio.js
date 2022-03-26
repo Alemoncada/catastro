@@ -31,7 +31,7 @@ const CreatePredio = () => {
             <div className='form'>
                 <h1>PREDIO</h1>
                 <div className='form' >
-                    <label for="nonmbrep">Nombre Predio: </label>
+                    <label >Nombre Predio: </label>
                     <input
                         ref={value => nombrep = value}
                         id="nombrep"
@@ -39,7 +39,7 @@ const CreatePredio = () => {
                     />
                 </div>
                 <div className='form'>
-                    <label for="avaluo">Avaluo: </label>
+                    <label >Avaluo: </label>
                     <input
                         ref={value => avaluo = value}
                         id="avaluo"
@@ -47,7 +47,7 @@ const CreatePredio = () => {
                     />
                 </div>
                 <div className='form'>
-                    <label for="departamento">Departamento: </label>
+                    <label >Departamento: </label>
                     <input
                         ref={value => departamento = value}
                         id="departamento"
@@ -55,14 +55,14 @@ const CreatePredio = () => {
                     />
                   </div>
                   <div className='form'>
-                    <label for="municipio">Municipio: </label>
+                    <label >Municipio: </label>
                     <input
                         ref={value => municipio = value}
                         id="municipio"
                         
                     />
                 </div>
-                <div class="pure-controls">
+                <div >
                     <button type="submit">Crear Predio</button>
                 </div>
             </div>

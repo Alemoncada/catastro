@@ -6,3 +6,4 @@ npx postgraphile \
 --allow-explain \
 --watch
 --owner-connection postgres:///catastropgeosat \
+--Access-Control-Allow-Origin:*

@@ -33,7 +33,7 @@ const CreateConstruccione = () => {
             <div className='form'>
                 <h1>CONSTRUCCIONES</h1>
                 <div className='form' >
-                    <label for="nombrec">Nombre Construccion: </label>
+                    <label >Nombre Construccion: </label>
                     <input
                         ref={value => nombrec = value}
                         id="nombrec"
@@ -41,7 +41,7 @@ const CreateConstruccione = () => {
                     />
                 </div>
                 <div className='form'>
-                    <label for="area">Area: </label>
+                    <label >Area: </label>
                     <input
                         ref={value =>area = value}
                         id="area"
@@ -49,7 +49,7 @@ const CreateConstruccione = () => {
                     />
                 </div>
                 <div className='form'>
-                    <label for="valor">Valor: </label>
+                    <label >Valor: </label>
                     <input
                         ref={value => valor = value}
                         id="valor"
@@ -57,7 +57,7 @@ const CreateConstruccione = () => {
                     />
                 </div>  
                 <div className='form'> 
-                    <label for="agua">Agua: </label>
+                    <label >Agua: </label>
                     <input
                         ref={value => agua = value}
                         id="agua"
@@ -66,7 +66,7 @@ const CreateConstruccione = () => {
                 </div>
                
                 <div className='form'> 
-                    <label for="predioid">Id predio al que pertenece: </label>
+                    <label >Id predio al que pertenece: </label>
                     <input
                         ref={value => predioid  = value}
                         id="predioid"
@@ -74,8 +74,8 @@ const CreateConstruccione = () => {
                     />
                 </div>
                 
-                <div class="pure-controls">
-                    <button variant="primary" type="submit">Crear Construccion</button>
+                <div>
+                    <button type="submit">Crear Construccion</button>
                 </div>
             </div>
         </form>

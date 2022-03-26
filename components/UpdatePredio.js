@@ -14,8 +14,18 @@ const UPDATE_PREDIO_MUTATION = gql`
     }
 `;
 
+const DELETE_PREDIO_MUTATION = gql`
+    mutation deletePredio( $tid:number!) {
+        deletePredio( input: {tid:$tid} ) {
+            deletedPredioNodeId
+        }          
+          
+    }
+`;
+
+
 const UpdatePredio = () => {
-    let nombrep,avaluo,departamento,municipio;
+    let pid, nombrep,avaluo,departamento,municipio;
     const [updatePredio] = useMutation(UPDATE_PREDIO_MUTATION);
   
     return (
@@ -69,13 +79,48 @@ const UpdatePredio = () => {
                         
                     />
                 </div>
-                <div class="pure-controls">
+                <div >
                     <button type="submit">Actualizar Predio</button>
                 </div>
             </div>
         </form>
       </div>
     );    
-}
+};
 
-export default UpdatePredio;
+
+const DeletePredio = () => {
+    let tid;
+    const [deletePredio] = useMutation(DELETE_PREDIO_MUTATION);
+  
+    return (
+      <div>
+        <form
+          onSubmit={e => {
+            e.preventDefault();
+            deletePredio({ variables: { pid: pid.value} });
+          }}
+          
+        >
+            <div className='form'>
+                <h1>ELIMINAR PREDIO</h1>
+                <div className='form' >
+                    <label for="pid">id: </label>
+                    <input
+                        ref={value => pid = value}
+                        id="pid"
+                        
+                    />
+                </div>                
+                
+                <div >
+                    <button type="submit">Eliminar Predio</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    );    
+};
+
+
+export default {UpdatePredio, DeletePredio};

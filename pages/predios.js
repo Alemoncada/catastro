@@ -1,17 +1,16 @@
 import { ApolloProvider } from "@apollo/client";
 import client from "../apollo-client";
-import ConstruccionesTable from "../components/ConstruccionesTable";
-import UpdatePredio from "../components/UpdatePredio";
+import PrediosTable from "../components/PrediosTable";
+import {UpdatePredio, DeletePredio} from "../components/UpdatePredio";
 
-
-
-import '../styles/globals.css'
-
-export default function Construcciones() {
+export default function Predios() {
   return(
-  <ApolloProvider client={client}>
-    <UpdatePredio />
-     <ConstruccionesTable />    
-  </ApolloProvider>) 
+    
+  < ApolloProvider client={client}>
+    <DeletePredio />  
+    <PrediosTable />    
+  </ApolloProvider> 
+  
+  ) 
 }
  

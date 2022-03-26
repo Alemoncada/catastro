@@ -17,8 +17,19 @@ const UPDATE_TERRENO_MUTATION = gql`
 `;
 
 
+const DELETE_TERRENO_MUTATION = gql`
+    mutation deleteTerreno( $tid:number!) {
+        deleteTerreno( input: {tid:$tid} ) {
+            deletedTerrenoNodeId
+        }            
+          
+    }
+`;
+
+
+
 const UpdateTerreno = () => {
-    let nombret, area, valor, direccion, construccionid;
+    let tid, nombret, area, valor, direccion, construccionid;
     const [updateTerreno] = useMutation(UPDATE_TERRENO_MUTATION);
   
     return (
@@ -82,8 +93,41 @@ const UpdateTerreno = () => {
                     />
                 </div>
                 
-                <div class="pure-controls">
+                <div >
                     <button type="submit">Actualizar Terreno</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    );    
+};
+
+const DeleteTerreno = () => {
+    let tid;
+    const [deleteTerreno] = useMutation(DELETE_TERRENO_MUTATION);
+  
+    return (
+      <div>
+        <form
+          onSubmit={e => {
+            e.preventDefault();
+            deleteTerreno({ variables: { tid: tid.value} });
+          }}
+          
+        >
+            <div className='form'>
+                <h1>ELIMINAR TERRENO</h1>
+                <div className='form' >
+                    <label for="tid">id: </label>
+                    <input
+                        ref={value => tid = value}
+                        id="tid"
+                        
+                    />
+                </div>                
+                
+                <div >
+                    <button type="submit">Eliminar Terreno</button>
                 </div>
             </div>
         </form>
@@ -91,4 +135,7 @@ const UpdateTerreno = () => {
     );    
 }
 
-export default UpdateTerreno;
+
+export default {UpdateTerreno, DeleteTerreno};
+
+

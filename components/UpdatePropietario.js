@@ -18,15 +18,22 @@ const UPDATE_PROPIETARIO_MUTATION = gql`
     }
 `;
 
+const DELETE_PROPIETARIO_MUTATION = gql`
+    mutation deletePropietario( $id:number!) {
+        deletePropietario( input: {id:$id} ) {
+            deletedPropietarioNodeId
+        }          
+          
+    }
+`;
+
 
 const UpdatePropietario = () => {
-    let nombre, direccion, telefono, email, tipo, ccNit;
+    let id, nombre, direccion, telefono, email, tipo, ccNit;
     const [createPropietario] = useMutation(UPDATE_PROPIETARIO_MUTATION);
   
     return (
       <div>
-
-        <h1> CATASTRO</h1>
 
         <form
           onSubmit={e => {
@@ -94,7 +101,7 @@ const UpdatePropietario = () => {
                         
                     />
                 </div>
-                <div class="pure-controls">
+                <div >
                     <button variant="primary" type="submit">Actualizar Propietario</button>
                 </div>
             </div>
@@ -103,4 +110,38 @@ const UpdatePropietario = () => {
     );    
 }
 
-export default UpdatePropietario;
+const DeletePropietario = () => {
+    let id;
+    const [deletePropietario] = useMutation(DELETE_PROPIETARIO_MUTATION);
+  
+    return (
+      <div>
+        <form
+          onSubmit={e => {
+            e.preventDefault();
+            deletePropietario({ variables: { id: id.value} });
+          }}
+          
+        >
+            <div className='form'>
+                <h1>ELIMINAR PREDIO</h1>
+                <div className='form' >
+                    <label for="id">id: </label>
+                    <input
+                        ref={value => id = value}
+                        id="id"
+                        
+                    />
+                </div>                
+                
+                <div >
+                    <button type="submit">Eliminar Propietario</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    );    
+};
+
+
+export default {UpdatePropietario, DeletePropietario};
