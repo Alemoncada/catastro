@@ -28,34 +28,34 @@ const CreatePredio = () => {
           }}
           
         >
-            <div>
+            <div className='form'>
                 <h1>PREDIO</h1>
                 <div className='form' >
-                    <label for="nonmbrep">Nombre Predio</label>
+                    <label for="nonmbrep">Nombre Predio: </label>
                     <input
                         ref={value => nombrep = value}
                         id="nombrep"
                         
                     />
                 </div>
-                <div >
-                    <label for="avaluo">Avaluo</label>
+                <div className='form'>
+                    <label for="avaluo">Avaluo: </label>
                     <input
                         ref={value => avaluo = value}
                         id="avaluo"
                         
                     />
                 </div>
-                <div >
-                    <label for="departamento">Departamento</label>
+                <div className='form'>
+                    <label for="departamento">Departamento: </label>
                     <input
                         ref={value => departamento = value}
                         id="departamento"
                         
                     />
                   </div>
-                  <div>
-                    <label for="municipio">Municipio</label>
+                  <div className='form'>
+                    <label for="municipio">Municipio: </label>
                     <input
                         ref={value => municipio = value}
                         id="municipio"

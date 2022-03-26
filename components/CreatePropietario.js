@@ -31,34 +31,34 @@ const CreatePropietario = () => {
           }}
           
         >
-            <div>
+            <div className='form'>
                 <h1>PROPIETARIO</h1>
                 <div className='form' >
-                    <label for="nombre">Nombre Propietario</label>
+                    <label for="nombre">Nombre Propietario: </label>
                     <input
                         ref={value => nombre = value}
                         id="nombre"
                         
                     />
                 </div>
-                <div >
-                    <label for="direccion">Dirección</label>
+                <div className='form'>
+                    <label for="direccion">Dirección: </label>
                     <input
                         ref={value =>direccion = value}
                         id="direccion"
                         
                     />
                 </div>
-                <div >
-                    <label for="telefono">Telefono</label>
+                <div className='form'>
+                    <label for="telefono">Telefono: </label>
                     <input
                         ref={value => telefono = value}
                         id="telefono"
                         
                     />
                 </div>  
-                <div> 
-                    <label for="email">email</label>
+                <div className='form'> 
+                    <label for="email">email: </label>
                     <input
                         ref={value => email = value}
                         id="email"
@@ -66,16 +66,16 @@ const CreatePropietario = () => {
                     />
                 </div>
                
-                <div> 
-                    <label for="tipo">Tipo natural o juridica</label>
+                <div className='form'> 
+                    <label for="tipo">Tipo natural o juridica: </label>
                     <input
                         ref={value => tipo = value}
                         id="tipo"
                         
                     />
                 </div>
-                <div> 
-                    <label for="ccNit">Cedula o Nit</label>
+                <div className='form'> 
+                    <label for="ccNit">Cedula o Nit:  </label>
                     <input
                         ref={value => ccNit = value}
                         id="ccNit"

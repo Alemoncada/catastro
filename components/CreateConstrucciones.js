@@ -30,34 +30,34 @@ const CreateConstruccione = () => {
           }}
           
         >
-            <div>
+            <div className='form'>
                 <h1>CONSTRUCCIONES</h1>
                 <div className='form' >
-                    <label for="nombrec">Nombre Construccion</label>
+                    <label for="nombrec">Nombre Construccion: </label>
                     <input
                         ref={value => nombrec = value}
                         id="nombrec"
                         
                     />
                 </div>
-                <div >
-                    <label for="area">Area</label>
+                <div className='form'>
+                    <label for="area">Area: </label>
                     <input
                         ref={value =>area = value}
                         id="area"
                         
                     />
                 </div>
-                <div >
-                    <label for="valor">Valor</label>
+                <div className='form'>
+                    <label for="valor">Valor: </label>
                     <input
                         ref={value => valor = value}
                         id="valor"
                         
                     />
                 </div>  
-                <div> 
-                    <label for="agua">Agua</label>
+                <div className='form'> 
+                    <label for="agua">Agua: </label>
                     <input
                         ref={value => agua = value}
                         id="agua"
@@ -65,8 +65,8 @@ const CreateConstruccione = () => {
                     />
                 </div>
                
-                <div> 
-                    <label for="predioid">Id predio al que pertenece</label>
+                <div className='form'> 
+                    <label for="predioid">Id predio al que pertenece: </label>
                     <input
                         ref={value => predioid  = value}
                         id="predioid"

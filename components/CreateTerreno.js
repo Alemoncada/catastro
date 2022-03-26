@@ -30,34 +30,34 @@ const CreateTerreno = () => {
           }}
           
         >
-            <div>
+            <div className='form'>
                 <h1>TERRENO</h1>
                 <div className='form' >
-                    <label for="nombret">Nombre Terreno</label>
+                    <label for="nombret">Nombre Terreno: </label>
                     <input
                         ref={value => nombret = value}
                         id="nombret"
                         
                     />
                 </div>
-                <div >
-                    <label for="area">Area</label>
+                <div className='form'>
+                    <label for="area">Area: </label>
                     <input
                         ref={value =>area = value}
                         id="area"
                         
                     />
                 </div>
-                <div >
-                    <label for="valor">Valor</label>
+                <div className='form'>
+                    <label for="valor">Valor: </label>
                     <input
                         ref={value => valor = value}
                         id="valor"
                         
                     />
                 </div>  
-                <div> 
-                    <label for="direccion">Direccion</label>
+                <div className='form'> 
+                    <label for="direccion">Direccion: </label>
                     <input
                         ref={value => direccion = value}
                         id="direccion"
@@ -65,8 +65,8 @@ const CreateTerreno = () => {
                     />
                 </div>
                
-                <div> 
-                    <label for="construccionid">Id Construccion a la que pertenece</label>
+                <div className='form'> 
+                    <label for="construccionid">Id Construccion a la que pertenece: </label>
                     <input
                         ref={value => construccionid  = value}
                         id="construccionid"
